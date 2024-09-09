@@ -1,0 +1,25 @@
+fetch('https://mediafiles.botpress.cloud/bc96c32d-8211-491f-86ef-730a5e29d152/webchat/v2.1/theme.json')
+  .then(response => response.json())
+  .then(data => {
+    window.botpress.init({
+      "theme": data, // Apply the fetched theme
+      "clientId": "f45c5ba4-1736-4e1c-8d25-1a8657ab8f47",
+      "botId": "bc96c32d-8211-491f-86ef-730a5e29d152",
+      "style": "SMBLawGroup Stylizer.css",
+      "configuration": {
+        "botName": "SMBLawGroup"
+      }
+    });
+  })
+  .catch(e => {
+    // Fallback in case the theme fails to load
+    window.botpress.init({
+      "clientId": "f45c5ba4-1736-4e1c-8d25-1a8657ab8f47",
+      "botId": "bc96c32d-8211-491f-86ef-730a5e29d152",
+      "style": "SMBLawGroup Stylizer.css",
+      "configuration": {
+        "botName": "SMBLawGroup"
+      }
+    });
+    console.error(e);
+  });
