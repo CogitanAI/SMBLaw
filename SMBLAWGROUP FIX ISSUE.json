@@ -16,7 +16,7 @@ fetch('https://mediafiles.botpress.cloud/bc96c32d-8211-491f-86ef-730a5e29d152/we
     window.botpress.init({
       "clientId": "f45c5ba4-1736-4e1c-8d25-1a8657ab8f47",
       "botId": "bc96c32d-8211-491f-86ef-730a5e29d152",
-      "style": "SMBLawGroup Stylizer.css",
+      "style": "https://github.com/CogitanAI/SMBLaw/SMBLawGroup%20Stylizer.css",
       "configuration": {
         "botName": "SMBLawGroup"
       }
